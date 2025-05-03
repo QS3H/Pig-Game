@@ -8,6 +8,49 @@
     <title>Pig Game</title>
   </head>
   <body>
+    <button class="btn btn--settings">⚙️ Settings</button>
+    <div class="settings-modal hidden">
+      <button class="close-modal">&times;</button>
+      <h2>Game Settings</h2>
+      <div class="settings-form">
+        <div class="player-names">
+          <input
+            type="text"
+            id="player1-name"
+            placeholder="Player 1 Name"
+            aria-label="Player 1 Name"
+          />
+          <input
+            type="text"
+            id="player2-name"
+            placeholder="Player 2 Name"
+            aria-label="Player 2 Name"
+          />
+        </div>
+        <div class="game-options">
+          <label>
+            Winning Score:
+            <input
+              type="number"
+              id="winning-score"
+              value="100"
+              min="20"
+              max="200"
+              aria-label="Winning Score"
+            />
+          </label>
+          <label>
+            Game Mode:
+            <select id="game-mode" aria-label="Game Mode">
+              <option value="normal">Normal</option>
+              <option value="quick">Quick Game (50 points)</option>
+              <option value="challenge">Challenge (150 points)</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn btn--settings-save">Save</button>
+      </div>
+    </div>
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
@@ -31,6 +74,13 @@
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </main>
+    <div class="stats">
+      <p>
+        Games Won - P1: <span id="p1-wins">0</span> P2:
+        <span id="p2-wins">0</span>
+      </p>
+      <p>Rolls this game: <span id="roll-count">0</span></p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
