@@ -294,3 +294,157 @@ main {
   animation: roll 0.8s ease-out;
   perspective: 1000px;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 75em) {
+  /* 1200px */
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  /* 900px */
+  html {
+    font-size: 50%; /* 8px */
+  }
+
+  main {
+    width: 90%;
+    max-width: 100rem;
+    height: auto;
+    min-height: 60rem;
+    margin: 2rem;
+  }
+
+  .player {
+    padding: 4rem 2rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .score {
+    font-size: 6rem;
+  }
+
+  .current {
+    width: 80%;
+  }
+
+  .dice {
+    height: 8rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  /* 600px */
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+
+  main {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .player {
+    padding: 3rem 1rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .score {
+    font-size: 5rem;
+  }
+
+  .current {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .current-score {
+    font-size: 3rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .btn--new {
+    top: 2rem;
+  }
+
+  .btn--roll {
+    top: 35rem;
+  }
+
+  .btn--hold {
+    top: 41rem;
+  }
+
+  .dice {
+    top: 13rem;
+    height: 7rem;
+  }
+
+  .settings-modal {
+    width: 90%;
+    max-width: 350px;
+    padding: 1.5rem;
+  }
+
+  .player-names {
+    flex-direction: column;
+  }
+
+  .stats {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  /* 400px */
+  .name {
+    font-size: 2rem;
+  }
+
+  .score {
+    font-size: 4rem;
+  }
+
+  .current-score {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Add overlay for settings modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
