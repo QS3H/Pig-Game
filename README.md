@@ -2,7 +2,7 @@
 
 A fun and interactive dice game built with vanilla JavaScript where two players compete to reach a target score. The game features customizable settings, player statistics, and a modern UI design.
 
-## 🎮 [Play the Game](https://yourusername.github.io/pig-game)
+## 🎮 [Play the Game](https://qs3h.github.io/Pig-Game/)
 
 ## Game Rules
 
