@@ -123,7 +123,7 @@ const rollDice = function () {
 
     // Wait for animation to complete before showing the result
     setTimeout(() => {
-      diceEl.src = `/Pig-Game/images/dice-${dice}.png`;
+      diceEl.src = `images/dice-${dice}.png`;
 
       if (dice !== 1) {
         currentScore += dice;
