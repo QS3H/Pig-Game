@@ -20,6 +20,7 @@ const btnSaveSettings = document.querySelector(".btn--settings-save");
 const rollCountEl = document.getElementById("roll-count");
 const p1WinsEl = document.getElementById("p1-wins");
 const p2WinsEl = document.getElementById("p2-wins");
+const overlay = document.querySelector(".overlay");
 
 let scores, currentScore, activePlayer, playing;
 let winningScore = 100;
@@ -37,6 +38,7 @@ const gameSettings = {
 // Settings modal handlers
 const openSettings = function () {
   settingsModal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
   document.getElementById("player1-name").value = gameSettings.player1Name;
   document.getElementById("player2-name").value = gameSettings.player2Name;
   document.getElementById("winning-score").value = gameSettings.winningScore;
@@ -45,6 +47,7 @@ const openSettings = function () {
 
 const closeSettings = function () {
   settingsModal.classList.add("hidden");
+  overlay.classList.add("hidden");
 };
 
 const saveSettings = function () {
@@ -166,9 +169,8 @@ btnHold.addEventListener("click", holdScore);
 btnNew.addEventListener("click", init);
 btnSettings.addEventListener("click", openSettings);
 closeModal.addEventListener("click", closeSettings);
-btnSaveSettings.addEventListener("click", saveSettings);
+overlay.addEventListener("click", closeSettings);
 
-// Keyboard controls
 document.addEventListener("keydown", function (e) {
   if (e.code === "Space") {
     e.preventDefault(); // Prevent page scroll
